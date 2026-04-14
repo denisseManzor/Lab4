@@ -1,13 +1,35 @@
-//TIP To <b>Run</b> code, press <shortcut actionId="Run"/> or
-// click the <icon src="AllIcons.Actions.Execute"/> icon in the gutter.
-void main() {
-  //TIP Press <shortcut actionId="ShowIntentionActions"/> with your caret at the highlighted text
-  // to see how IntelliJ IDEA suggests fixing it.
-  IO.println(String.format("Hello and welcome!"));
+import java.util.Scanner;
 
-  for (int i = 1; i <= 5; i++) {
-    //TIP Press <shortcut actionId="Debug"/> to start debugging your code. We have set one <icon src="AllIcons.Debugger.Db_set_breakpoint"/> breakpoint
-    // for you, but you can always add more by pressing <shortcut actionId="ToggleLineBreakpoint"/>.
-    IO.println("i = " + i);
-  }
+public class Main {
+    public static void main(String[] args){
+        Scanner sc = new Scanner(System.in);
+
+        System.out.println("Ingrese el nombre del perro: ");
+        String nombrePerro = sc.nextLine();
+
+        System.out.println("Ingrese la edad del perro: ");
+        int edadPerro = sc.nextInt();
+
+        sc.nextLine();
+        System.out.println("ingrese la raza del perro: ");
+        String raza = sc.nextLine();
+
+        Perro perro = new Perro(nombrePerro, edadPerro, raza);
+
+        System.out.println("Ingrese nombre del gato: ");
+        String nombreGato = sc.nextLine();
+
+        System.out.println("Ingrese edad del gato");
+        int edadGato = sc.nextInt();
+
+        System.out.println("Su gato es de interior? (True para si, y False para no)");
+        boolean esDeInterior = sc.nextBoolean();
+
+        Gato gato = new Gato(nombreGato, edadGato, esDeInterior);
+
+        perro.mostrarInfo();
+        perro.hacerSonido();
+        gato.mostrarInfo();
+        gato.hacerSonido();
+    }
 }
