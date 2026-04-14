@@ -1,0 +1,12 @@
+Este diagrama representa un sistema con herencia.
+La clase principal es Mascota, que funciona como clase base, tiene dos atributos protegidos: nombre (String)
+y edad (int), y define métodos como hacerSonido() y mostrarInfo().
+
+De esta clase se derivan dos clases: Perro y Gato.
+Ambas heredan los atributos y métodos de Mascota, pero además agregan sus propias características:
+
+Perro: tiene el atributo privado raza (String).
+Gato: tiene el atributo privado esDeInterior (boolean).
+
+En resumen, el diagrama muestra una relación de herencia donde Mascota es la base y Perro y Gato son
+especializaciones con características propias.
